@@ -1,0 +1,36 @@
+.team-row {
+    display:flex;
+    justify-content:center;
+}
+
+.team {
+    border: 2px solid rgb(140, 130, 115);
+    width: 300px;
+    height: 300px;
+}
+
+figure {
+    text-align: center;
+    width:15%;
+}
+
+figcaption {
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#introduction {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+}
+
+#quote {
+    margin-bottom: 5px;
+}
+
+#signature {
+    margin-top: 0;
+}
