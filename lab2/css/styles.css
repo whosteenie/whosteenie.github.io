@@ -23,7 +23,7 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    margin-top: 170px;
+    margin-top: 150px;
 }
 
 header {
@@ -68,7 +68,6 @@ main {
 
 #health {
     font-size: 3.5rem;
-    min-height: 50px;
     text-align: center;
 }
 
@@ -129,4 +128,9 @@ main {
     justify-content: space-between;
     width: 100%;
     font-size: 2rem;
+}
+
+#answer {
+    font-size: 4rem;
+    min-height: 90px;
 }

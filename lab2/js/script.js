@@ -44,6 +44,7 @@ function initializeGame() {
     let health = document.querySelector("#health");
     health.textContent = "❤️ ".repeat(7);
     won = false;
+    document.querySelector("#answer").textContent = "";
 }
 
 function checkGuess() {
@@ -60,7 +61,7 @@ function checkGuess() {
 
     let health = document.querySelector("#health");
     attempts++;
-    health.textContent = "❤️ ".repeat(7 - attempts) + "🖤 ".repeat(attempts);
+    
     console.log("Attempts: " + attempts);
     feedback.style.color = "orange";
     document.querySelector("#guesses").textContent += guess;
@@ -68,10 +69,11 @@ function checkGuess() {
     if(guess == randomNumber) {
         feedback.textContent = "You guessed it! You won!";
         feedback.style.color = "darkgreen";
-        attempts--;
         wins++;
+        attempts--;
         won = true;
         document.querySelector("#guesses").textContent += "✅";
+        document.querySelector("#answer").textContent = "👍 " + randomNumber + " 👍";
         gameOver();
     } else {
         if(attempts == 7) {
@@ -79,6 +81,7 @@ function checkGuess() {
             feedback.style.color = "red";
             losses++;
             document.querySelector("#guesses").textContent += "☠️";
+            document.querySelector("#answer").textContent = "👎 " + randomNumber + " 👎";
             gameOver();
         } else if(guess > randomNumber) {
             feedback.textContent = "Guess was high";
@@ -88,9 +91,12 @@ function checkGuess() {
             document.querySelector("#guesses").textContent += "⬆️ ";
         }
     }
+
+    health.textContent = "❤️ ".repeat(7 - attempts) + "🖤 ".repeat(attempts);
 }
 
 function gameOver() {
+    health.textContent = "❤️ ".repeat(7 - attempts) + "🖤 ".repeat(attempts);
     let guessBtn = document.querySelector("#guessBtn");
     let resetBtn = document.querySelector("#resetBtn");
     guessBtn.style.display = "none";
