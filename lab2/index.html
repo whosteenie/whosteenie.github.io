@@ -4,34 +4,35 @@
         <title> Guess the Number </title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/script.js" defer></script>
     </head>
     <body>
         <header>
             <h1>Guess the Number!</h1>
             <h2>Guess a number between 1 and 99 in seven attempts!</h2>
         </header>
-        <br>
-        <div id="main">
-            <div id="game">
-                <div id="feedback">ㅤ</div>
-                <div id="health">❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️</div>
-                <div id="inputArea">
-                    Enter a guess: 
-                    <input type="text" id="playerGuess" size="5">
-                    <button id="guessBtn"> Guess </button>
-                    <button id="resetBtn"> Reset </button>
-                </div>
-    
-                <div id="guessesLabel"> Previous Guesses: 
-                </div>
-                <span id="guesses">ㅤ</span>
-                
-                <div id="scoreboard">
-                    <div id="wins">Wins: 0</div>
-                    <div id="losses">Losses: 0</div>
+        <main>
+            <div class="container">
+                <div id="game">
+                    <div id="health">❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️</div>
+                    <div id="inputArea">
+                        Enter a guess: 
+                        <input id="playerGuess" min="1" max="99">
+                        <button id="guessBtn"> Guess </button>
+                        <button id="resetBtn"> Reset </button>
+                    </div>
+                    
+                    <div id="guessesLabel"> Previous Guesses: 
+                    </div>
+                    <span id="guesses"></span>
+                    
+                    <div id="scoreboard">
+                        <div id="wins">Wins: 0</div>
+                        <div id="losses">Losses: 0</div>
+                    </div>
+                    <div id="feedback"></div>
                 </div>
             </div>
-        </div>
-        <script src="js/script.js"></script>
+        </main>
     </body>
 </html>

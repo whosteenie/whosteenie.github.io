@@ -71,14 +71,14 @@ function checkGuess() {
         attempts--;
         wins++;
         won = true;
-        document.querySelector("#guesses").textContent += "✅ ";
+        document.querySelector("#guesses").textContent += "✅";
         gameOver();
     } else {
         if(attempts == 7) {
             feedback.textContent = "Sorry, you lost!";
             feedback.style.color = "red";
             losses++;
-            document.querySelector("#guesses").textContent += "☠️ ";
+            document.querySelector("#guesses").textContent += "☠️";
             gameOver();
         } else if(guess > randomNumber) {
             feedback.textContent = "Guess was high";
