@@ -84,9 +84,18 @@ for (let i = 1; i < 14; i++) {
 let hiddenImg = new Image();
 hiddenImg.src = 'img/cards/hidden.png';
 
+let handArea = document.getElementById("hand-area");
+let dealerArea = document.getElementById("dealer-area");
+let table = document.getElementById("table");
+let playerArea = document.getElementById("player-area");
+
 function startGame() {
     console.log("Game started");
-    labelDealer.style.display = "block";
+    handArea.style.display = "flex";
+    dealerArea.style.display = "flex";
+    table.style.display = "block";
+    playerArea.style.display = "flex";
+    labelDealer.textContent = "Dealer's Hand";
     cardBack.style.display = "none";
     playerBet = parseInt(inputBet.value);
     inputBet.style.display = "none";
@@ -288,6 +297,10 @@ function revealDealer() {
 }
 
 function resetGame() {
+    handArea.style.display = "none";
+    dealerArea.style.display = "none";
+    table.style.display = "none";
+    playerArea.style.display = "none";
     buttonStart.style.display = "inline-block";
     buttonReset.style.display = "none";
 
@@ -311,7 +324,7 @@ function resetGame() {
     betText.textContent = "Current Bet: " + playerBet;
 
     cardBack.style.display = "inline-block";
-    labelDealer.style.display = "none";
+    labelDealer.textContent = "";
 }
 
 function hideButtons() {

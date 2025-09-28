@@ -13,11 +13,15 @@
     </header>
     <main>
         <div id="game-area">
-            <div id="label-dealer" style="display: none">Dealer's Hand</div>
-            <div id="dealer-area" class="hand"></div>
-            <div id="card-back" class="hand"></div>
-            <div id="table"></div>
-            <div id="player-area" class="hand"></div>
+            <div id="label-dealer"></div>
+            <div id="card-area">
+                <div id="card-back" class="hand"></div>
+                <div id="hand-area" style="display: none;">
+                    <div id="dealer-area" class="hand" style="display: none;"></div>
+                    <div id="table" style="display: none;"></div>
+                    <div id="player-area" class="hand" style="display: none;"></div>
+                </div>
+            </div>
             <div id="chips" class="message">Chips: </div>
             <div id="bet" class="message">Current Bet: 0</div>
             <div id="button-area">
