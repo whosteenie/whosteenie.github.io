@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack</title>
+    <link href="img/kc-favi.png" rel="icon" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
 </head>
@@ -13,30 +14,33 @@
     </header>
     <main>
         <div id="game-area">
-            <div id="label-dealer"></div>
+            <div id="text-dealer"></div>
             <div id="card-area">
                 <div id="card-back" class="hand"></div>
                 <div id="hand-area" style="display: none;">
-                    <div id="dealer-area" class="hand" style="display: none;"></div>
-                    <div id="table" style="display: none;"></div>
-                    <div id="player-area" class="hand" style="display: none;"></div>
+                    <div id="dealer-area" class="hand hidden"></div>
+                    <div id="table-area" class="hidden"></div>
+                    <div id="player-area" class="hand hidden"></div>
                 </div>
             </div>
-            <div id="chips" class="message">Chips: </div>
-            <div id="bet" class="message">Current Bet: 0</div>
-            <div id="button-area">
-                <button id="button-start" class="button">Start Game</button>
-                <input id="input-bet" style="display: none;">
-                <button id="button-bet" class="button" style="display: none;">Bet</button>
-                <button id="button-hit" class="button" style="display: none;">Hit</button>
-                <button id="button-stand" class="button" style="display: none;">Stand</button>
-                <button id="button-double" class="button" style="display: none;">Double Down</button>
-                <button id="button-split" class="button" style="display: none;">Split</button>
-                <button id="button-surrender" class="button" style="display: none;">Surrender</button>
-                <button id="button-insurance" class="button" style="display: none;">Insurance</button>
-                <button id="button-reset" class="button" style="display: none;">Reset Game</button>
+            <div id="text-area">
+                <div id="text-player"></div>
+                <div id="text-chips" class="message">Chips: </div>
+                <div id="text-bet" class="message">Current Bet: 0</div>
             </div>
-            <p id="status-message" class="message"></p>
+            <div id="button-area">
+                <button id="button-start" class="button">START GAME</button>
+                <input id="input-bet" class="hidden">
+                <button id="button-bet" class="button hidden">BET</button>
+                <button id="button-hit" class="button hidden">HIT</button>
+                <button id="button-stand" class="button hidden">STAND</button>
+                <button id="button-double" class="button hidden">DOUBLE DOWN</button>
+                <button id="button-split" class="button hidden">SPLIT</button>
+                <button id="button-surrender" class="button hidden">SURRENDER</button>
+                <button id="button-insurance" class="button hidden">INSURANCE</button>
+                <button id="button-reset" class="button hidden">RESET GAME</button>
+            </div>
+            <p id="text-status" class="message"></p>
         </div>
     </main>
 </body>
