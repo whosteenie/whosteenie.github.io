@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1><span id="black">BLACK</span><span id="jack">JACK</span></h1>
+    </header>
+    <main>
+        <div id="game-area">
+            <div id="label-dealer" style="display: none">Dealer's Hand</div>
+            <div id="dealer-area" class="hand"></div>
+            <div id="card-back" class="hand"></div>
+            <div id="table"></div>
+            <div id="player-area" class="hand"></div>
+            <div id="chips" class="message">Chips: </div>
+            <div id="bet" class="message">Current Bet: 0</div>
+            <div id="button-area">
+                <button id="button-start" class="button">Start Game</button>
+                <input id="input-bet" style="display: none;">
+                <button id="button-bet" class="button" style="display: none;">Bet</button>
+                <button id="button-hit" class="button" style="display: none;">Hit</button>
+                <button id="button-stand" class="button" style="display: none;">Stand</button>
+                <button id="button-double" class="button" style="display: none;">Double Down</button>
+                <button id="button-split" class="button" style="display: none;">Split</button>
+                <button id="button-surrender" class="button" style="display: none;">Surrender</button>
+                <button id="button-insurance" class="button" style="display: none;">Insurance</button>
+                <button id="button-reset" class="button" style="display: none;">Reset Game</button>
+            </div>
+            <p id="status-message" class="message"></p>
+        </div>
+    </main>
+</body>
+</html>

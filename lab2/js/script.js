@@ -5,7 +5,7 @@ let losses = 0;
 let won = false;
 
 document.querySelector("#playerGuess").addEventListener("input", function() {
-    this.value = this.value.replace(/[^0-9]/g, '');
+    // this.value = this.value.replace(/[^0-9]/g, '');
     if(this.value.length > 2) {
         this.value = this.value.slice(0, 2);
     }

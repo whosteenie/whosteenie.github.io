@@ -1,0 +1,135 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background-image: url("../img/casino.jpeg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    font-size: 48px;
+    font-weight: bold;
+    height: 10%;
+}
+
+h1 {
+    margin: 0;
+}
+
+#label-dealer {
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#black {
+    color: black;
+    text-shadow: 2px 2px 4px white;
+}
+
+#jack {
+    color: red;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+#game-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 909px;
+}
+
+#table {
+    width: 50px;
+    min-height: 100px;
+}
+
+.hand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 300px;
+    gap: 20px;
+}
+
+#card-back {
+    background-image: url("../img/cards/hidden.png");
+    background-size: cover;
+    width: 300px;
+    min-height: 435.6px;
+    aspect-ratio: 250/363;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+}
+
+.card {
+    width: 150px;
+    aspect-ratio: 250/363;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+}
+
+#input-bet {
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #4CAF50;
+}
+
+#input-bet:focus {
+    outline: none;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.button:active {
+    background-color: #3e8e41;
+}
+
+.message {
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    font-size: 24px;
+    font-weight: bold;
+    min-height: 28px;
+    margin: 0;
+}
