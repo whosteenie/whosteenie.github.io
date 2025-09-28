@@ -205,7 +205,21 @@ function dealCard(handType) {
         updateHand("player");
 
         if (playerScore === 21) {
-            stand();
+            if (playerCards.length === 2) {
+                dealCard("dealer");
+                if(playerScore === dealerScore) {
+                    textStatus.textContent = "Push!";
+                } else {
+                    textStatus.textContent = "Player has blackjack! Player wins!";
+                    textPlayer.textContent = "Player's Hand 👑";
+                    playerChips += Math.floor(playerBet * 1.5) + playerBet;
+                    textChips.textContent = "Chips: " + playerChips;
+                }
+                
+                textBet.textContent = "Current Bet: 0";
+            } else {
+                stand();
+            }
         }
     } else if (handType === "dealer") {
         dealerCards.push(card);
