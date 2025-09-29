@@ -48,7 +48,7 @@ main {
 }
 
 #hand-area {
-    min-height: 40vh;
+    height: 100%;
 }
 
 #table-area {
@@ -90,6 +90,10 @@ main {
     font-size: 2.5vh;
     font-weight: bold;
     min-height: 5vh;
+}
+
+#text-error {
+    color: red;
 }
 
 .message {

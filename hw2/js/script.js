@@ -14,13 +14,13 @@ let dealerHand = document.getElementById("dealer-area");
 let playerHand = document.getElementById("player-area");
 let handArea = document.getElementById("hand-area");
 let dealerArea = document.getElementById("dealer-area");
-let tableArea = document.getElementById("table-area");
 let playerArea = document.getElementById("player-area");
 let textDealer = document.getElementById("text-dealer");
 let textPlayer = document.getElementById("text-player");
 let textChips = document.getElementById("text-chips");
 let textBet = document.getElementById("text-bet");
 let textStatus = document.getElementById("text-status");
+let textError = document.getElementById("text-error");
 
 // Game Variables
 let deck = [];
@@ -56,8 +56,7 @@ hiddenImg.src = 'img/cards/hidden.png';
 buttonStart.addEventListener("click", setBet);
 buttonBet.addEventListener("click", function () {
     if (inputBet.value === "" || parseInt(inputBet.value) <= 0 || parseInt(inputBet.value) > playerChips) {
-        textStatus.textContent = "Invalid bet amount!";
-        textStatus.style.color = "red";
+        textError.textContent = "Invalid bet amount!";
         return;
     }
 
@@ -86,8 +85,7 @@ buttonInsurance.addEventListener("click", () => {
 inputBet.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         if (inputBet.value === "" || parseInt(inputBet.value) <= 0 || parseInt(inputBet.value) > playerChips) {
-            textStatus.textContent = "Invalid bet amount!";
-            textStatus.style.color = "red";
+            textError.textContent = "Invalid bet amount!";
             return;
         }
 
@@ -103,7 +101,6 @@ function startGame() {
     // Show game areas
     handArea.style.display = "flex";
     dealerArea.style.display = "flex";
-    tableArea.style.display = "block";
     playerArea.style.display = "flex";
     textDealer.textContent = "Dealer's Hand";
     textPlayer.textContent = "Player's Hand";
@@ -114,6 +111,7 @@ function startGame() {
     buttonStand.style.display = "inline-block";
     buttonSurrender.style.display = "inline-block";
     textStatus.textContent = "";
+    textError.style.display = "none";
     textStatus.style.color = "white";
 
     // Set bet
@@ -340,13 +338,14 @@ function revealDealer() {
 function resetGame() {
     handArea.style.display = "none";
     dealerArea.style.display = "none";
-    tableArea.style.display = "none";
     playerArea.style.display = "none";
     buttonStart.style.display = "inline-block";
     buttonReset.style.display = "none";
     cardBack.style.display = "inline-block";
     textDealer.textContent = "";
     textPlayer.textContent = "";
+    textError.style.display = "flex";
+    textError.textContent = "";
 
     deck = [];
     dealerCards = [];
