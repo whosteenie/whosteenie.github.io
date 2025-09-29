@@ -67,7 +67,7 @@ main {
 
 .card, #card-back {
     aspect-ratio: 250/363;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
     border-radius: 0.8vh;
 }
 
@@ -85,27 +85,23 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-shadow: 2px 2px 4px black;
     font-size: 2.5vh;
     font-weight: bold;
     min-height: 5vh;
 }
 
-#text-error {
-    color: red;
-}
-
 .message {
     margin: 0;
+    color: white;
 }
 
-#black {
+#black, #text-player {
     color: black;
     text-shadow: 2px 2px 4px white;
 }
 
-#jack {
+#jack, #text-error, #text-dealer {
     color: red;
 }
 

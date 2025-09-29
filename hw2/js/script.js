@@ -66,12 +66,18 @@ buttonHit.addEventListener("click", hit);
 buttonStand.addEventListener("click", stand);
 buttonReset.addEventListener("click", resetGame);
 buttonDouble.addEventListener("click", () => {
-    playerChips -= playerBet;
-    playerBet *= 2;
-    textChips.textContent = `Chips: ${playerChips}`;
-    textBet.textContent = `Current Bet: ${playerBet}`;
-    hit();
-    stand();
+    if (playerChips < playerBet) {
+        textStatus.textContent = "Not enough chips to double down!";
+        textStatus.style.color = "red";
+        return;
+    } else {
+        playerChips -= playerBet;
+        playerBet *= 2;
+        textChips.textContent = `Chips: ${playerChips}`;
+        textBet.textContent = `Current Bet: ${playerBet}`;
+        hit();
+        stand();
+    }
 });
 buttonSplit.addEventListener("click", () => {
     textStatus.textContent = "Split not implemented yet!";
@@ -163,11 +169,11 @@ function startGame() {
 
         textBet.textContent = "Current Bet: 0";
         hideButtons();
-    } else if(playerScore === 21) {
+    } else if (playerScore === 21) {
         textStatus.textContent = "Player has blackjack! Player wins!";
         textPlayer.textContent = "Player's Hand 👑";
         playerChips += Math.floor(playerBet * 1.5) + playerBet;
-        textChips.textContent = "Chips: " + playerChips;
+        textChips.textContent = `Chips: ${playerChips}`;
         textBet.textContent = "Current Bet: 0";
         revealDealer();
         hideButtons();
@@ -284,11 +290,7 @@ function stand() {
     hideButtons();
     revealDealer();
 
-    if (playerScore === 21 && playerCards.length === 2) {
-        textStatus.textContent = "Player has blackjack! Player wins!";
-        textPlayer.textContent = "Player's Hand 👑";
-        playerChips += Math.floor(playerBet * 1.5) + playerBet;
-    } else if (playerScore > 21) {
+    if (playerScore > 21) {
         textStatus.textContent = "Player busts! Dealer wins!";
         textDealer.textContent = "Dealer's Hand 👑";
     } else {
