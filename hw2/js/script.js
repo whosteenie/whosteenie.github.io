@@ -170,6 +170,7 @@ function startGame() {
         textPlayer.textContent = "Player's Hand 👑";
         playerChips += Math.floor(playerBet * 1.5) + playerBet;
         textChips.textContent = "Chips: " + playerChips;
+        textBet.textContent = "Current Bet: 0";
         revealDealer();
         hideButtons();
     }
