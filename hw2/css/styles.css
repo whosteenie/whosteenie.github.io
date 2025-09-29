@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'JQKAS';
+    src: url("../JqkasWild.ttf");
+}
+
+@font-face {
+    font-family: 'CASINO';
+    src: url("../CasinoFlat.ttf");
+}
+
 html, body {
     height: 100vh;
     width: 100vw;
@@ -5,7 +15,7 @@ html, body {
     overflow: hidden;
     background-color: #015C1F;
     background-image: url("../img/felt.png");
-    font-family: bold Arial, Helvetica, sans-serif;
+    font-family: 'JQKAS';
 }
 
 header {
@@ -14,8 +24,10 @@ header {
     align-items: center;
     height: 10vh;
     color: white;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 3px 3px 4px black;
     font-size: 4vh;
+    font-family: 'CASINO';
+    margin-top: 2vh;
 }
 
 h1 {
@@ -51,9 +63,8 @@ main {
     height: 100%;
 }
 
-#table-area {
-    width: 5vw;
-    min-height: 10vh;
+#button-area {
+    min-height: 5vh;
 }
 
 .hand {
