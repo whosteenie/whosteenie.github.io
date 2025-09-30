@@ -92,6 +92,7 @@ inputBet.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         if (inputBet.value === "" || parseInt(inputBet.value) <= 0 || parseInt(inputBet.value) > playerChips) {
             textError.textContent = "Invalid bet amount!";
+            textError.style.color = "red";
             return;
         }
 
@@ -187,6 +188,7 @@ function setBet() {
     buttonStart.style.display = "none";
     inputBet.style.display = "inline-block";
     buttonBet.style.display = "inline-block";
+    textError.textContent = "";
 }
 
 // Add card to the appropriate hand and update score
@@ -367,8 +369,8 @@ function resetGame() {
     if (playerChips <= 0) {
         playerChips = 10000;
         textChips.textContent = `Chips: ${playerChips}`;
-        textStatus.textContent = "You ran out of chips! Here's 10000 more to play with.";
-        textStatus.style.color = "yellow";
+        textError.textContent = "You ran out of chips! Here's 10000 more to play with.";
+        textError.style.color = "yellow";
     }
 }
 
