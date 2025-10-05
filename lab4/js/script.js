@@ -76,13 +76,13 @@ let submitButton = document.querySelector("#submit");
 submitButton.addEventListener("click", function () {
     let submitError = document.querySelector("#submitError");
     submitError.style.color = "red";
-    if (!passwordInput.value || passwordInput.value.length < 6) {
-        submitError.textContent = "Password must be at least 6 characters!";
+    if (!usernameInput.value || usernameInput.value.length < 3) {
+        submitError.textContent = "Username must be at least 3 characters!";
         return;
     }
 
-    if (!usernameInput.value || usernameInput.value.length < 3) {
-        submitError.textContent = "Username must be at least 3 characters!";
+    if (!passwordInput.value || passwordInput.value.length < 6) {
+        submitError.textContent = "Password must be at least 6 characters!";
         return;
     }
 
