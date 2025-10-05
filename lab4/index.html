@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1> Sign Up Form </h1>
+
+    <fieldset>
+    <legend>Sign Up</legend>
+    <div id="firstName-area" class="form-group">
+        <p class="form-label">First Name: </p>
+        <input type="text">
+    </div>
+    <div id="lastName-area" class="form-group">
+        <p class="form-label">Last Name: </p>
+        <input type="text">
+    </div>
+    <div id="email-area" class="form-group">
+        <p class="form-label">Email: </p>
+        <input type="text">
+    </div>
+    <div id="phone-area" class="form-group">
+        <p class="form-label">Phone Number: </p>
+        <input type="text">
+    </div>
+    <div id="zip-area" class="form-group">
+        <p class="form-label">Zip Code: </p>
+        <input id="zipInput" type="text">
+        <div id="zipError"></div>
+    </div>
+    <div id="city-area" class="form-group">
+        <p class="form-label">City: </p>
+        <p id="city"></p>
+    </div>
+    <div id="latitude-area" class="form-group">
+        <p class="form-label">Latitude: </p>
+        <p id="latitude"></p>
+    </div>
+    <div id="longitude-area" class="form-group">
+        <p class="form-label">Longitude: </p>
+        <p id="longitude"></p>
+    </div>
+    <div id="state-area" class="form-group">
+        <p class="form-label">State: </p>
+        <select id="state"></select>
+    </div>
+    <div id="county-area" class="form-group">
+        <p class="form-label">Select a County: </p>
+        <select id="county"></select>
+    </div>
+    <div id="username-area" class="form-group">
+        <p class="form-label">Desired Username: </p>
+        <input id="username" type="text">
+        <p id="userTaken" style="display: inline;"></p>
+    </div>
+    <div id="password-area" class="form-group">
+        <p class="form-label">Password: </p>
+        <input id="password" type="password">
+        <p id="suggested" style="display: inline;"></p>
+    </div>
+    <div id="confirmPassword-area" class="form-group">
+        <p class="form-label">Type Password Again: </p>
+        <input id="confirmPassword" type="password">
+    </div>
+    <div id="submit-area" class="form-group">
+        <input id="submit" type="submit" value="Sign up!">
+        <p id="submitError" style="display: inline; color: red"></p>
+    </div>
+    </fieldset>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
