@@ -73,11 +73,24 @@ statesSelect.addEventListener("change", async function () {
 let passwordInput = document.querySelector("#password");
 let confirmPasswordInput = document.querySelector("#confirmPassword");
 let submitButton = document.querySelector("#submit");
-submitButton.addEventListener("click", function () {
+submitButton.addEventListener("click", async function () {
     let submitError = document.querySelector("#submitError");
     submitError.style.color = "red";
     if (!usernameInput.value || usernameInput.value.length < 3) {
         submitError.textContent = "Username must be at least 3 characters!";
+        return;
+    }
+
+    let user = usernameInput.value;
+    let usernameResponse = await fetch("https://csumb.space/api/usernamesAPI.php?username=" + user);
+        if (!usernameResponse.ok) {
+            throw new Error("Response failed");
+        }
+
+        let usernameData = await usernameResponse.json();
+
+    if (!usernameData.available) {
+        submitError.textContent = "Username is unavailable...";
         return;
     }
 
